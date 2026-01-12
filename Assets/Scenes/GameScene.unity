@@ -119,6 +119,44 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &89077794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 62f7ee54a3afa1842a1b88ff30a739e8, type: 3}
+  m_PrefabInstance: {fileID: 830942265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &89077795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89077794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2570f2e753080924dbb6e75fd12768d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+--- !u!65 &89077797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89077794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.47350502, y: 1.8098727, z: 0.37246943}
+  m_Center: {x: 0, y: 0.92283577, z: 0.008537531}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +480,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 62f7ee54a3afa1842a1b88ff30a739e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 89077797}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 62f7ee54a3afa1842a1b88ff30a739e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 89077795}
   m_SourcePrefab: {fileID: 100100000, guid: 62f7ee54a3afa1842a1b88ff30a739e8, type: 3}
 --- !u!1 &832575517
 GameObject:
