@@ -6,8 +6,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Auto Run
-        transform.position += Vector3.forward * movementSpeed * Time.deltaTime;
         // Move left or right
         transform.position += Input.GetAxis("Horizontal") * Vector3.right * movementSpeed * Time.deltaTime;
     }
