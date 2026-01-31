@@ -3,9 +3,18 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private int movementSpeed = 5;
+    private GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
+    }
 
     void Update()
     {
+        if (gameManager.isGameOver)
+            return;
+
         // Move left or right
         transform.position += Input.GetAxis("Horizontal") * Vector3.right * movementSpeed * Time.deltaTime;
 
@@ -20,8 +29,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        // Game Over
+        gameManager.GameOver();
     }
 }

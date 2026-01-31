@@ -16,18 +16,17 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         scoreText.text = "Score: 0";
-        bestScoreText.text = "Best score: 0"; // need to edit
+        bestScoreText.text = $"Best score: {PlayerPrefs.GetInt("BestScore", 0)}";
         gameOverPanel.SetActive(false);
     }
 
-    public void UpdateScore(int newScore)
+    public void UpdateScore(int newScore, int newBestScore)
     {
         scoreText.text = $"Score: {newScore}";
-
-        // if new score is bigger than best score --> update best score
+        bestScoreText.text = $"Best score: {newBestScore}";
     }
 
-    public void GameOver(int score, int bestScore)
+    public void ShowGameOver(int score, int bestScore)
     {
         gameOverPanel.SetActive(true);
         finalScoreText.text = $"Your Score: {score}\nYour Best Score: {bestScore}";

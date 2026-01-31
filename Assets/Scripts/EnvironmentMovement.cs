@@ -6,9 +6,18 @@ public class EnvironmentMovement : MonoBehaviour
     private float speed = 4f;
     [SerializeField]
     private float acceleration = 0.05f;
+    private GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
+    }
 
     void Update()
     {
+        if (gameManager.isGameOver)
+            return;
+
         transform.position -= Vector3.forward * speed * Time.deltaTime;
         speed += acceleration * Time.deltaTime;
 
