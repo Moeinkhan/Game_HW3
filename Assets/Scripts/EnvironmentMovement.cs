@@ -3,11 +3,14 @@ using UnityEngine;
 public class EnvironmentMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 5f;
+    private float speed = 4f;
+    [SerializeField]
+    private float acceleration = 0.05f;
 
     void Update()
     {
         transform.position -= Vector3.forward * speed * Time.deltaTime;
+        speed += acceleration * Time.deltaTime;
 
         // Move the street forward as the 3rd environment if it goes out of the camera view
         if (transform.position.z < -95)
