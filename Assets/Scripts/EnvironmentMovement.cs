@@ -9,10 +9,10 @@ public class EnvironmentMovement : MonoBehaviour
     {
         transform.position -= Vector3.forward * speed * Time.deltaTime;
 
-        // Destroy the Street if it goes out of the camera view
+        // Move the street forward as the 3rd environment if it goes out of the camera view
         if (transform.position.z < -95)
         {
-            Destroy(gameObject);
+            transform.position += new Vector3(0, 0, 268.5f);
         }
     }
 }
