@@ -201,7 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6605cc4899781442bfbdf9ba5d230b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnvironmentMovement
-  speed: 5
+  speed: 4
+  acceleration: 0.05
 --- !u!1 &1977021498889941989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9222678714421470743, guid: 17265f90e02414a4b94a36c2d3e0e434, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 87
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 9222678714421470743, guid: 17265f90e02414a4b94a36c2d3e0e434, type: 3}
       propertyPath: m_LocalRotation.w
