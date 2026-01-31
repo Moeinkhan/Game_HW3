@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8419936579816106704}
+  - component: {fileID: 8023636657130899814}
   - component: {fileID: 2159252945249323933}
   - component: {fileID: 3877979325247283942}
   m_Layer: 0
@@ -33,6 +34,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8023636657130899814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076017006898909177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3488867, y: 1.1164399, z: 2.152398}
+  m_Center: {x: -0.6758252, y: -0.0016084716, z: 0.0018209219}
 --- !u!33 &2159252945249323933
 MeshFilter:
   m_ObjectHideFlags: 0
