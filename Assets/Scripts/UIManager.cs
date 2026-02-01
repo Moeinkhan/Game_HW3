@@ -40,6 +40,6 @@ public class UIManager : MonoBehaviour
     }
     public void BackToMenu()
     {
-        SceneManager.LoadScene("MenuSecene"); // Load Menu Scene
+        SceneManager.LoadScene("MenuScene"); // Load Menu Scene
     }
 }
