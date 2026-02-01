@@ -8,13 +8,15 @@ public class GameManager : MonoBehaviour
     private int bestScore;
     private UIManager UI_Manager;
     private Animator running_Animator;
+    private AudioSource music_Player;
     public bool isGameOver = false;
 
     void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", 0);
-        running_Animator = GameObject.Find("pepsiman").GetComponent<Animator>();
         UI_Manager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
+        running_Animator = GameObject.Find("pepsiman").GetComponent<Animator>();
+        music_Player = GameObject.Find("Music_Player").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         running_Animator.speed = 0;
+        music_Player.Stop();
         UI_Manager.ShowGameOver((int)score, bestScore);
     }
 }
