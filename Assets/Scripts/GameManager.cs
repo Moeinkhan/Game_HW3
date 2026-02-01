@@ -7,11 +7,13 @@ public class GameManager : MonoBehaviour
     private float scoreRateIncreasement = 0.25f; // The amount which is added to "Score Rate" as much as game speed increases
     private int bestScore;
     private UIManager UI_Manager;
+    private Animator running_Animator;
     public bool isGameOver = false;
 
     void Start()
     {
         bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        running_Animator = GameObject.Find("pepsiman").GetComponent<Animator>();
         UI_Manager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
     }
 
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameOver = true;
+        running_Animator.speed = 0;
         UI_Manager.ShowGameOver((int)score, bestScore);
     }
 }
