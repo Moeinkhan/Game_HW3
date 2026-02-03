@@ -1,4 +1,4 @@
-# Pepsi Man 3D Endless Runner
+# Pepsi Man Runner
 
 ## Project Introduction
 This project is a 3D endless runner game inspired by **Pepsi Man**, developed using **Unity 3D** and **C#**.  
